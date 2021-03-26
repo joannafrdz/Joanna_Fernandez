@@ -38,15 +38,42 @@
     margin-left: 40px;
     color: #fff;
     text-decoration: none;
+    background : linear-gradient(to top, darkslateblue 0%, darkslateblue 40%, transparent 10.01%) no-repeat left bottom / 0 100%;
 }
-.header__slogan {
-    text-align: center;
-    margin-top: 70px;
+.underline a {
+    background-size: 100% 100%;
 }
+.underline a:hover {
+    animation: underlined 0.5s both;
+}
+@keyframes underlined {
+    from {
+        background-size: 100% 100%;
+        background-position: bottom right;
+    }
+    50% {
+        background-size: 0% 100%;
+        background-position: bottom right;
+    }
+    50.01% {
+        background-position: bottom left;
+    }
+    100% {
+        background-size: 100% 100%;
+        background-position: bottom left;
+    }
+}
+
+
+
 .header__slogan--title {
     color: #fff;
     font-size: 30px;
     text-transform: uppercase;
+}
+.header__slogan {
+    text-align: center;
+    margin-top: 70px;
 }
 .header__slogan--btn {
     color: #fff;
@@ -70,8 +97,8 @@
     content: "";
     display: block;
     width: 100%;
-    height: 3px;
-    border-radius: 5px;
+    height: 2px;
+    border-radius: 2px;
     background: #fff;
     position: relative;
 }
@@ -101,11 +128,11 @@
         position: absolute;
         width: 100vw;
         height: 100vw;
-        background: rgb(62, 57, 107);;
+        background: rgb(62, 57, 107);
         top: 0; left: 0;
     }
     .header__navbar--menu-link {
         margin: 30px 0;
         font-size: 22px;
     }
-}
+} 
